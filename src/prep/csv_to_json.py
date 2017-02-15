@@ -7,8 +7,10 @@ import csv
 #open CSV file
 #Scan through characters
 
+inputFile = raw_input("Input file path to CSV file:\n")
+
 #open csv file as read in
-csvInput = open("tmp.csv", "rU")
+csvInput = open(inputFile, "rU")
 #open json output file as write only
 jsonOutput = open("tmp.json", "w")
 #column titles to pull information in with
