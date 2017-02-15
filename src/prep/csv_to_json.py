@@ -8,7 +8,7 @@ import csv
 #Scan through characters
 
 #open csv file as read in
-csvInput = open("tmp.csv", "r")
+csvInput = open("tmp.csv", "rU")
 #open json output file as write only
 jsonOutput = open("tmp.json", "w")
 #column titles to pull information in with
@@ -18,6 +18,6 @@ columnNames = ("Document Title", "Saved File Name", "Tags")
 csvReader = csv.DictReader(csvInput, columnNames, dialect = "excel")
 
 #for each row, convert column data into json object and write to file
-for row in reader:
+for row in csvReader:
 	json.dump(row, jsonOutput)
 	jsonOutput.write("\n")
