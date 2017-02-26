@@ -1,0 +1,5 @@
+Models: Location of Database Schemas
+
+View: Location of Expressjs logic for client viewing
+
+Control: Location of logic that converts commands for model and view
