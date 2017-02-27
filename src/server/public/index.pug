@@ -1,0 +1,226 @@
+doctype html
+// is this the front end?
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    meta(name='author', content='')
+    // <link rel="icon" href="/img/favicon.ico">
+    title SPELL
+    // Bootstrap core CSS
+    link(href='/css/bootstrap.css', rel='stylesheet')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    link(href='/css/ie10-viewport-bug-workaround.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='/css/starter-template.css', rel='stylesheet')
+    script(src='/js/ie-emulation-modes-warning.js')
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/index.html', style='padding:5px 5px; margin-left:0px')
+            img(alt='Brand', href='/index.html', src='/img/SPELLWebsite-header_revised.png', style='max-height:40px')
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Environment
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/content/Environment/Adapting%20to%20Climate%20Change/') Adapting to Climate Change
+                li.divider
+                li
+                  a(href='/content/Environment/Climate%20Change%20Info/') Climate Change Info
+                li.divider
+                li
+                  a(href='/content/Environment/Geography/') Geography
+                li.divider
+                li
+                  a(href='/content/Environment/Teaching%20Resources/') Teaching Resources
+                li.divider
+                li
+                  a(href='/content/Environment/Waste%20Facts/') Waste Facts
+                li.divider
+                li
+                  a(href='/content/Environment/Natural%20Habitat/') Natural Habitat
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Health and Safety
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/content/Health%20and%20Safety/Awareness/') Awareness
+                li.divider
+                li
+                  a(href='/content/Health%20and%20Safety/Boat%20Safety/') Boat Safety
+                li.divider
+                li
+                  a(href='/content/Health%20and%20Safety/Health%20PDFs/') Health PDFs
+                li.divider
+                li
+                  a(href='/content/Health%20and%20Safety/Natural%20Disaster%20Management/') Natural Disaster Management
+                li.divider
+                li
+                  a(href='/content/Health%20and%20Safety/Safety/') Safety
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Language Arts
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/content/Language%20Arts/English%20Grammar/') English Grammar
+                li.divider
+                li
+                  a(href='/content/Language%20Arts/Story%20Books/') Story Books
+                li.divider
+                li
+                  a(href='/content/Language%20Arts/Teaching%20Resources/') Teaching Resources
+                li.divider
+                li
+                  a(href='/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/') Voice of America (VOA)
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Local Topics
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/content/Local%20Topics/Micronesia/') Micronesia
+                li.divider
+                li
+                  a(href='/content/Local%20Topics/Pacific%20Islands/') Pacific Islands
+                li.divider
+                li
+                  a(href='/content/Local%20Topics/Samoa/') Samoa
+                li.divider
+                li
+                  a(href='/content/Local%20Topics/Tonga/') Tonga
+                li.divider
+                li
+                  a(href='/content/Local%20Topics/Vanuatu/') Vanuatu
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Math
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/content/Math/Addition%20and%20Subtraction/') Addition and Subtraction
+                li.divider
+                li
+                  a(href='/content/Math/Advanced/') Advanced
+                li.divider
+                li
+                  a(href='/content/Math/Decimals/') Decimals
+                li.divider
+                li
+                  a(href='/content/Math/Fractions/') Fractions
+                li.divider
+                li
+                  a(href='/content/Math/Multiplication%20and%20Division/') Multiplication and Division
+                li.divider
+                li
+                  a(href='/content/Math/Negative%20Numbers%20and%20Absolute%20Values/') Negative Numbers and Absolute Values
+                li.divider
+                li
+                  a(href='/content/Math/Teaching%20Resources/') Teaching Resources
+                li.divider
+                li
+                  a(href='/content/Math/Telling%20Time/') Telling Time
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Science
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/content/Science/Earth%20and%20Space/') Earth and Space
+                li.divider
+                li
+                  a(href='/content/Science/Engineering/') Engineering
+                li.divider
+                li
+                  a(href='/content/Science/Human%20Body/') Human Body
+                li.divider
+                li
+                  a(href='/content/Science/Life%20Science/') Life Science
+                li.divider
+                li
+                  a(href='/content/Science/Physical%20Science/') Physical Science
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Reference Tools
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/med/') Medical Encyclopedia
+                li.divider
+                li
+                  a(href='/Wikipedia/') Wikipedia
+                li.divider
+                li
+                  a(href='/content/Reference%20Tools/Dictionaries/') Dictionaries
+    .container
+      // This should be replaced by a more suitable container
+      #mycarousel.carousel.slide(data-ride='carousel')
+        .carousel-inner
+          .item.active
+            img.img-responsive(src='/img/index-bgNEW.png', alt='SPELL background')
+            .container
+              // Can we delete this?
+              .carousel-caption
+      .row
+        .col-xs-12.col-lg-4
+          br
+          // Why? (Same for the ones below)
+          a(href='/content/Environment/')
+            img.center-block(src='/img/SPELL_Environment_FINAL.png', style='max-height:140px')
+        .col-xs-12.col-lg-4
+          br
+          a(href='/content/Health%20and%20Safety/')
+            // We should really rename the images to be simple/consistent
+            img.center-block(src='/img/SPELL_HealthSafety_Icon_FINAL.png', style='max-height:140px')
+        .col-xs-12.col-lg-4
+          br
+          a(href='/content/Language%20Arts/')
+            img.center-block(src='/img/SPELL_Langauge_Arts_Icon_FINAL.png', style='max-height:140px')
+        .col-xs-12.col-lg-4
+          br
+          a(href='/content/Local%20Topics/')
+            img.center-block(src='/img/SPELL_localtopics_FINAL.png', style='max-height:140px')
+        .col-xs-12.col-lg-4
+          br
+          a(href='/content/Math/')
+            img.center-block(src='/img/SPELL_Math_Icon_FINAL.png', style='max-height:140px')
+        .col-xs-12.col-lg-4
+          br
+          a(href='/content/Science/')
+            img.center-block(src='/img/SPELL_Science_FINAL.png', style='max-height:140px')
+        .col-xs-12.col-lg-4
+          br
+          a(href='/med/')
+            img.center-block(src='/img/SPELL_Encyclopedia_FINAL.png', style='max-height:140px')
+        .col-xs-12.col-lg-4
+          br
+          a(href='/Wikipedia/')
+            img.center-block(src='/img/SPELL_Wikipedia_FINAL.png', style='max-height:140px')
+        .col-xs-12.col-lg-4
+          br
+          a(href='/content/Reference%20Tools/Dictionaries/')
+            img.center-block(src='/img/SPELL_Dictionaries_FINAL.png', style='max-height:140px')
+    br
+    footer.panel-footer
+      .container
+        a.btn.btn-primary.btn-xs(href='aboutus.html') About Us
+    // Bootstrap core JavaScript
+    // Placed at the end of the document so the pages load faster
+    script(src='/js/jquery.min.js')
+    script(src='/js/bootstrap.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='/js/ie10-viewport-bug-workaround.js')
