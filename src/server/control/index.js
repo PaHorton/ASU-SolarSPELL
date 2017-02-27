@@ -1,5 +1,3 @@
-(function() {
-
 //server commands defined here. 
 //include all URL's to visit
 
@@ -15,5 +13,3 @@
 	});
 
 	router.get('/api/
-
-}());
