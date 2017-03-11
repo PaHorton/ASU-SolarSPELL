@@ -1,0 +1,7 @@
+Functional Requirements for API
+
+1. Search tags, titles, subjects for a specific keyword and make a list of all elements that fit the requirements
+
+2. Display file when requested
+
+3. ls

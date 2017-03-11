@@ -9,6 +9,8 @@
 
 	//database
 	var mongoose = require("mongoose");
+	require('./models/library_object');
+	mongoose.connect('mongodb://localhost/library');
 	//linking server commands
 	var routes = require('./routes/index');
 	//initialize app

@@ -12,7 +12,7 @@ if(inputFile == ''):
 #open csv file as read in
 csvInput = open(inputFile, "rU")
 #open json output file as write only
-jsonOutput = open("seed.js", "w")
+jsonOutput = open("content.json", "w")
 #column titles to pull information in with
 columnNames = ("Title", "Filename", "Subject", "Keywords", "Coverage", "Audience", "Language", "Source", "License", "Creation_Date", "Contributor", "Added_Date")
 #open CSV parser with the input file, searcing the columnNames, and 
@@ -20,19 +20,23 @@ columnNames = ("Title", "Filename", "Subject", "Keywords", "Coverage", "Audience
 csvReader = csv.DictReader(csvInput, columnNames, dialect = "excel")
 
 #create head of database seed file
-jsonOutput.write("'use strict';\n")
-jsonOutput.write("var library_object = require('../models/library_object.js');\n")
-jsonOutput.write("library_object.find({}).remove(function() {\n    library_object.create(\n")
+#jsonOutput.write("'use strict';\n")
+#jsonOutput.write("var library_object = require('../models/library_object.js');\n")
+#jsonOutput.write("library_object.find({}).remove(function() {\n    library_object.create(\n")
+
+jsonOutput.write("[\n");
 
 #ignore title bar
 csvReader.next()
 #cycle through each entry and format for JSON
-out = "\n\t" + ",\n\t".join([json.dumps(row, indent=8) for row in csvReader])
+out = "\n\t" + ",\n\t".join([json.dumps(row, indent=4) for row in csvReader])
 
 #ouptput to JSON file
 jsonOutput.write(out)
 #write tail end of file
-jsonOutput.write("\n    );\n});")
+#jsonOutput.write("\n    );\n});")
+
+jsonOutput.write("]")
 
 #close files
 csvInput.close()

@@ -1,0 +1,6 @@
+This folder is where you store all schemas (blueprints) for various database objects. 
+
+Look at library_object.js for an example of how this works
+
+	-There can be further definitions applied but it isn't required (look at Title for an example)
+

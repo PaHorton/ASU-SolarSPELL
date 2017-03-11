@@ -1,0 +1,7 @@
+Routes/: Where API call functionality is defined
+
+app.js: similar to header file where all functionality is linked in order to run
+
+public/: location where all public information to the people is stored (like the html, css, images, etc.)
+
+models: where mongodb schemas are defined

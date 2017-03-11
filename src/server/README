@@ -1,5 +1,15 @@
-Models: Location of Database Schemas
+app.js: launching point of the ExpressJS app. Used to import all other server files
 
-View: Location of Expressjs logic for client viewing
+bin/: contains executable scripts. www, when invoked, starts the server
 
-Control: Location of logic that converts commands for model and view
+node_modules: home to all external modules used in the project. Don't touch
+
+package.json: defines JSON object that contains properties of our project
+
+public/: anything made publicly available by server. Contains JavaScripts, css, images, and templates
+
+routes/: houses Node controllers and where majority of backend code is stored
+
+views/: contain the various views of the website
+
+models/: where our Mongoose schema definitions are located (blueprints for database)

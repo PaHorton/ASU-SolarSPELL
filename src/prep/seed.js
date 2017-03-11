@@ -17,7 +17,7 @@ library_object.find({}).remove(function() {
         "Creation_Date": "Today", 
         "Subject": "Math, Chemistry"
 },
-    	{
+	{
         "License": "none", 
         "Language": "English", 
         "Title": "Test Title 2", 
