@@ -19,11 +19,6 @@ columnNames = ("Title", "Filename", "Subject", "Keywords", "Coverage", "Audience
 #configure it for the excel CSV format
 csvReader = csv.DictReader(csvInput, columnNames, dialect = "excel")
 
-#create head of database seed file
-#jsonOutput.write("'use strict';\n")
-#jsonOutput.write("var library_object = require('../models/library_object.js');\n")
-#jsonOutput.write("library_object.find({}).remove(function() {\n    library_object.create(\n")
-
 jsonOutput.write("[\n");
 
 #ignore title bar
