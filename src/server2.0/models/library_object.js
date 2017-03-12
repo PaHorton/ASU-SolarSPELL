@@ -21,13 +21,11 @@ library_object.add({
 	},
 	//subjects linked to the file
 	//TODO: get better descriptions of each area
-	Subjects: [
-		{
+	Subjects: [String] /*[
 			Subject: String,
 			Category: String,
 			SubCategory: String
-		}
-	],
+	]*/,
 	//filled with uncontrolled vocabulary
 	//used for searchability
 	Keywords: [],
