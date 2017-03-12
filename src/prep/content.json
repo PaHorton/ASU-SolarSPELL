@@ -8,11 +8,11 @@
     "Filename": "test1.pdf", 
     "Source": "Me", 
     "Audience": "Student", 
+    "Subjects": "Math, Chemistry", 
     "Contributor": "nshantz", 
     "Coverage": "Local", 
     "Keywords": "Funsies", 
-    "Creation_Date": "Today", 
-    "Subject": "Math, Chemistry"
+    "Creation_Date": "Today"
 },
 	{
     "License": "none", 
@@ -22,9 +22,9 @@
     "Filename": "test2.pdf", 
     "Source": "Me", 
     "Audience": "Teacher", 
+    "Subjects": "Physics, History", 
     "Contributor": "nshantz", 
     "Coverage": "Local", 
     "Keywords": "Funsies", 
-    "Creation_Date": "Yesterday", 
-    "Subject": "Physics, History"
+    "Creation_Date": "Yesterday"
 }]

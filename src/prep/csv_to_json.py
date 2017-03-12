@@ -14,7 +14,7 @@ csvInput = open(inputFile, "rU")
 #open json output file as write only
 jsonOutput = open("content.json", "w")
 #column titles to pull information in with
-columnNames = ("Title", "Filename", "Subject", "Keywords", "Coverage", "Audience", "Language", "Source", "License", "Creation_Date", "Contributor", "Added_Date")
+columnNames = ("Title", "Filename", "Subjects", "Keywords", "Coverage", "Audience", "Language", "Source", "License", "Creation_Date", "Contributor", "Added_Date")
 #open CSV parser with the input file, searcing the columnNames, and 
 #configure it for the excel CSV format
 csvReader = csv.DictReader(csvInput, columnNames, dialect = "excel")
