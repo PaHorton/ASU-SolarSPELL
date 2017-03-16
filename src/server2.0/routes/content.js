@@ -9,7 +9,7 @@ var library_object = mongoose.model('library_object', library_object, 'content')
 /* Get all subject names */
 router.get('/', function(req, res, next) {
 	//ideal_library.find({},
-	library_object.find({},
+	library_object.find().distinct("Subjects",
 		function(err, lo){
 			if(err){
 				res.send(err);
@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* Get all items with subject tag */
-router.get('/:subject', function(req, res, next) {
+router.get('/files/:subject', function(req, res, next) {
 	console.log(req.params.subject);
 	//ideal_library.find({
 	library_object.find({
@@ -34,7 +34,7 @@ router.get('/:subject', function(req, res, next) {
 });
 
 //returns all file names with the category tag and subject header
-router.get('/:subject/:category', function(req, res, next) {
+router.get('/files/:subject/:category', function(req, res, next) {
 	//ideal_library.find({
 	library_object.find({
 		Subjects: req.params.subject,
@@ -48,16 +48,8 @@ router.get('/:subject/:category', function(req, res, next) {
 });
 
 //returns file to open and display
-router.get('/:subject/:category/:file', function(req, res, next) {
-	//ideal_library.find({
-	library_object.find({
-		Title: req.params.file
-	}, function(err,lo){
-		if(err){
-			res.send(err);
-		}
-		res.json(lo);
-	});
+router.get('/:subject', function(req, res, next) {
+  res.render('content', { title: req.params.subject });
 });
 
 module.exports = router;
