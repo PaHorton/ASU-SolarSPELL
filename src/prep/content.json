@@ -1,30 +1,5 @@
-[
-
-	{
-    "License": "None", 
-    "Language": "English", 
-    "Title": "Test Title 1", 
-    "Added_Date": "Today", 
-    "Filename": "test1.pdf", 
-    "Source": "Me", 
-    "Audience": "Student", 
-    "Subjects": "Math, Chemistry", 
-    "Contributor": "nshantz", 
-    "Coverage": "Local", 
-    "Keywords": "Funsies", 
-    "Creation_Date": "Today"
-},
-	{
-    "License": "none", 
-    "Language": "English", 
-    "Title": "Test Title 2", 
-    "Added_Date": "Today", 
-    "Filename": "test2.pdf", 
-    "Source": "Me", 
-    "Audience": "Teacher", 
-    "Subjects": "Physics, History", 
-    "Contributor": "nshantz", 
-    "Coverage": "Local", 
-    "Keywords": "Funsies", 
-    "Creation_Date": "Yesterday"
+[{
+		"Title": "Bruce's Wonderful World of Computer Science",
+		"Filename": "test6.txt",
+		"Subjects": ["Computer Science","History"]
 }]
