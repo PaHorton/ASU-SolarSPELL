@@ -36,3 +36,15 @@ jsonOutput.write("]")
 #close files
 csvInput.close()
 jsonOutput.close()
+
+with open("content.json", "r") as jsonFile:
+    data = json.load(jsonFile)
+
+for i in range(len(data)):
+	subject = data[i]["Subjects"]
+	keyword = data[i]["Keywords"]
+	data[i]["Keywords"] = subject.split(", ")
+	data[i]["Subjects"] = subject.split(", ")
+
+with open("content.json", "w") as jsonFile:
+    json.dump(data, jsonFile, indent=4, sort_keys=True)
