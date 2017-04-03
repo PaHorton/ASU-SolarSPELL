@@ -3,6 +3,10 @@
 #this starts the mongodb database and the website
 #to import file, run "mongoimport --db SPELL --collection documents <json file> --jsonArray"
 
+if [ ! -d "./logs" ]; then
+	mkdir logs
+fi
+
 PCOUNT=`ps -ef | grep -v grep | grep m[o]ngod | wc -l`
 
 if [ $PCOUNT -gt 1 ]; then
