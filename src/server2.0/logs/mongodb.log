@@ -1,0 +1,33 @@
+2017-04-03T16:32:08.942-0700 I CONTROL  [initandlisten] MongoDB starting : pid=30817 port=27017 dbpath=/data/db 64-bit host=Giansar.sms-dhcp-poly.dhcp.asu.edu
+2017-04-03T16:32:08.942-0700 I CONTROL  [initandlisten] db version v3.4.2
+2017-04-03T16:32:08.942-0700 I CONTROL  [initandlisten] git version: 3f76e40c105fc223b3e5aac3e20dcd026b83b38b
+2017-04-03T16:32:08.942-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2k  26 Jan 2017
+2017-04-03T16:32:08.942-0700 I CONTROL  [initandlisten] allocator: system
+2017-04-03T16:32:08.943-0700 I CONTROL  [initandlisten] modules: none
+2017-04-03T16:32:08.943-0700 I CONTROL  [initandlisten] build environment:
+2017-04-03T16:32:08.943-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2017-04-03T16:32:08.943-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-04-03T16:32:08.943-0700 I CONTROL  [initandlisten] options: { processManagement: { fork: true }, systemLog: { destination: "file", path: "./logs/mongodb.log" } }
+2017-04-03T16:32:08.944-0700 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-04-03T16:32:08.944-0700 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-04-03T16:32:09.671-0700 I CONTROL  [initandlisten] 
+2017-04-03T16:32:09.672-0700 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-04-03T16:32:09.672-0700 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-04-03T16:32:09.672-0700 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2017-04-03T16:32:09.673-0700 I CONTROL  [initandlisten] 
+2017-04-03T16:32:09.734-0700 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2017-04-03T16:32:09.735-0700 I NETWORK  [thread1] waiting for connections on port 27017
+2017-04-03T16:32:10.479-0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:51758 #1 (1 connection now open)
+2017-04-03T16:32:10.488-0700 I COMMAND  [conn1] CMD: drop content.content
+2017-04-03T16:32:10.515-0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:51759 #2 (2 connections now open)
+2017-04-03T16:32:10.571-0700 I -        [conn2] end connection 127.0.0.1:51759 (2 connections now open)
+2017-04-03T16:32:10.571-0700 I -        [conn1] end connection 127.0.0.1:51758 (2 connections now open)
+2017-04-03T16:32:12.937-0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:51760 #3 (1 connection now open)
+2017-04-03T16:32:12.950-0700 I NETWORK  [conn3] received client metadata from 127.0.0.1:51760 conn3: { driver: { name: "nodejs", version: "2.2.24" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.4.0" }, platform: "Node.js v7.4.0, LE, mongodb-core: 2.1.8" }
+2017-04-03T16:32:12.969-0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:51761 #4 (2 connections now open)
+2017-04-03T16:32:12.995-0700 I INDEX    [conn4] build index on: content.content properties: { v: 2, unique: true, key: { Title: 1 }, name: "Title_1", ns: "content.content", background: true }
+2017-04-03T16:32:12.996-0700 I INDEX    [conn4] build index done.  scanned 62 total records. 0 secs
+2017-04-03T16:32:13.027-0700 I INDEX    [conn4] build index on: content.content properties: { v: 2, unique: true, key: { FileName: 1 }, name: "FileName_1", ns: "content.content", background: true }
+2017-04-03T16:32:18.303-0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:51762 #5 (3 connections now open)
+2017-04-03T16:32:24.019-0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:51763 #6 (4 connections now open)
+2017-04-03T16:32:27.799-0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:51764 #7 (5 connections now open)

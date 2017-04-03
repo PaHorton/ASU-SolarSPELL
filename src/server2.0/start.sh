@@ -18,9 +18,13 @@ else
 	fi
 fi
 
-mongoimport --db content --collection content --drop --file ../prep/content.json --jsonArray
+wget "https://docs.google.com/spreadsheets/d/1UbhXmMjnYqLmDziriUUYCaNvC1qlf5VicWG2rMh7pr0/export?format=csv" -O "Content.csv"
+python csv_to_json.py
+
+mongoimport --db content --collection content --drop --file content.json --jsonArray
 
 #trap `ps -ef | grep m[o]ngod | grep -v grep | awk '{print $2}' | xargs kill` 0
 
 npm install
 npm start
+
