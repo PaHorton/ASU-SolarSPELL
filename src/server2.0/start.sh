@@ -3,20 +3,24 @@
 #this starts the mongodb database and the website
 #to import file, run "mongoimport --db SPELL --collection documents <json file> --jsonArray"
 
-case "$(pidof mongod | wc -w)" in
+PCOUNT=`ps -ef | grep -v grep | grep m[o]ngod | wc -l`
 
-0) echo "Starting MongoDB..."
-	sudo mongod &
-	;;
+if [ $PCOUNT -gt 1 ]; then
+	echo "Removed extra instances of Mongo..."
+	ps -ef | grep m[o]ngod | grep -v grep | awk '{print $2}' | xargs kill
 
-1) echo "MongoDB already running..."
-	;;
+else
+	if [ $PCOUNT -eq 0 ]; then
+		echo "Starting MongoDB..."
+		mongod --fork --logpath ./logs/mongodb.log
+	else
+		echo "MongoDB already running..."
+	fi
+fi
 
-*) echo "Removed extra instances of Mongo..."
-	kill $(pidof mongod | awk '{print $1}')
-	;;
+mongoimport --db content --collection documents ../prep/content.json --jsonArray
 
-esac
+#trap `ps -ef | grep m[o]ngod | grep -v grep | awk '{print $2}' | xargs kill` 0
 
 npm install
 npm start
