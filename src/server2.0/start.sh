@@ -18,7 +18,7 @@ else
 	fi
 fi
 
-mongoimport --db SPELL --collection documents ../prep/content.json --jsonArray
+mongoimport --db content --collection documents ../prep/content.json --jsonArray
 
 #trap `ps -ef | grep m[o]ngod | grep -v grep | awk '{print $2}' | xargs kill` 0
 
