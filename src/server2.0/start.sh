@@ -3,10 +3,6 @@
 #this starts the mongodb database and the website
 #to import file, run "mongoimport --db SPELL --collection documents <json file> --jsonArray"
 
-if [ ! -d "./logs" ]; then
-	mkdir logs
-fi
-
 PCOUNT=`ps -ef | grep -v grep | grep m[o]ngod | wc -l`
 
 if [ $PCOUNT -gt 1 ]; then
@@ -22,8 +18,11 @@ else
 	fi
 fi
 
-wget "https://docs.google.com/spreadsheets/d/1UbhXmMjnYqLmDziriUUYCaNvC1qlf5VicWG2rMh7pr0/export?format=csv" -O "Content.csv"
-python csv_to_json.py
+wget -q --tries=10 --timeout=20 --spider http://google.com
+if [[ $? -eq 0 ]]; then
+	wget "https://docs.google.com/spreadsheets/d/1UbhXmMjnYqLmDziriUUYCaNvC1qlf5VicWG2rMh7pr0/export?format=csv" -O "Content.csv"
+	python csv_to_json.py
+fi
 
 mongoimport --db content --collection content --drop --file content.json --jsonArray
 
@@ -33,4 +32,3 @@ mongoimport --db content --collection headers --drop --file ../prep/headers.json
 
 npm install
 npm start
-
