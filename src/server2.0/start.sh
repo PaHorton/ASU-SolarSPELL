@@ -27,6 +27,8 @@ python csv_to_json.py
 
 mongoimport --db content --collection content --drop --file content.json --jsonArray
 
+mongoimport --db content --collection headers --drop --file ../prep/headers.json --jsonArray
+
 #trap `ps -ef | grep m[o]ngod | grep -v grep | awk '{print $2}' | xargs kill` 0
 
 npm install
