@@ -3,11 +3,7 @@
 import json
 import csv
 
-#prompt for data to parse
-inputFile = raw_input("Input file path to CSV file: (default: Workbook1.csv)\n")
-#default file path
-if(inputFile == ''):
-	inputFile = "Workbook1.csv"
+inputFile="../prep/Content.csv"
 
 #open csv file as read in
 csvInput = open(inputFile, "rU")
@@ -38,7 +34,8 @@ csvInput.close()
 jsonOutput.close()
 
 with open("content.json", "r") as jsonFile:
-    data = json.load(jsonFile)
+	print("Loading up the content")
+	data = json.load(jsonFile)
 
 for i in range(len(data)):
 	subject = data[i]["Subjects"]
@@ -47,4 +44,5 @@ for i in range(len(data)):
 	data[i]["Subjects"] = subject.split(", ")
 
 with open("content.json", "w") as jsonFile:
-    json.dump(data, jsonFile, indent=4, sort_keys=True)
+	print("Json created from the csv")
+	json.dump(data, jsonFile, indent=4, sort_keys=True)

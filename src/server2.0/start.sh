@@ -20,11 +20,11 @@ fi
 
 wget -q --tries=10 --timeout=20 --spider http://google.com
 if [[ $? -eq 0 ]]; then
-	wget "https://docs.google.com/spreadsheets/d/1UbhXmMjnYqLmDziriUUYCaNvC1qlf5VicWG2rMh7pr0/export?format=csv" -O "Content.csv"
-	python csv_to_json.py
+	wget "https://docs.google.com/spreadsheets/d/1UbhXmMjnYqLmDziriUUYCaNvC1qlf5VicWG2rMh7pr0/export?format=csv" -O "../prep/Content.csv"
+	python ../prep/csv_to_json.py
 fi
 
-mongoimport --db content --collection content --drop --file content.json --jsonArray
+mongoimport --db content --collection content --drop --file ../prep/content.json --jsonArray
 
 mongoimport --db content --collection headers --drop --file ../prep/headers.json --jsonArray
 
