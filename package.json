@@ -1,0 +1,22 @@
+{
+  "name": "asu-solarspell",
+  "version": "1.0.0",
+  "description": "Arizona State University's Implementation of the SolarSPELL project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-Quigley/ASU-SolarSPELL.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/James-Quigley/ASU-SolarSPELL/issues"
+  },
+  "homepage": "https://github.com/James-Quigley/ASU-SolarSPELL#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
