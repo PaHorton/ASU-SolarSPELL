@@ -2,24 +2,35 @@
  * Node module imports
  */
 import express from 'express';
+import helpers from './helpers';
+import Datalayer from './Datalayer';
+import path from 'path';
 
 /**
  * Initialize App with globals
  */
 let app = express();
 
-app.get("/", (req, res) => {
-    res.send("Welcome to Solar spell");
-});
+/**
+ * Instantiate Datalayer
+ */
+const datalayer = new Datalayer();
+
 
 /**
  * Setup routing
  */
-// helpers.routing(app);
+app.use(express.static(path.join(__dirname, 'public')));
+helpers.routing({
+    app,
+    datalayer
+});
 
+/**
+ * Setup error handlers
+ */
 app.use((err, req, res, next) => {
-    console.log(err);
-
+    console.error(err);
     res.status(500).send(err);
 })
 
