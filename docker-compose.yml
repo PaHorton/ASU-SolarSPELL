@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: npm run dev
+    ports:
+    - "3000:3000"
+    - "5858:5858"
+    volumes:
+    # Could change this to mount the whole directory if desired
+    - ./src:/server/src
+    - ./.env:/server/.env

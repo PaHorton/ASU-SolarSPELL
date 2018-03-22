@@ -4,7 +4,8 @@
   "description": "Arizona State University's Implementation of the SolarSPELL project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node -r @std/esm src/index.js",
+    "dev": "STD_ESM_OPTIONS={\"debug\":true,\"sourceMaps\":true} nodemon -r esm -r dotenv/config --inspect=0.0.0.0:5858 --nolazy src/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,15 @@
   },
   "homepage": "https://github.com/James-Quigley/ASU-SolarSPELL#readme",
   "dependencies": {
+    "esm": "^3.0.7",
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "nodemon": "^1.17.2"
+  },
+  "esm": {
+    "mode": "all",
+    "cjs": true
   }
 }

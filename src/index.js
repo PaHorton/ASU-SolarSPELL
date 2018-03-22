@@ -1,8 +1,7 @@
 /**
  * Node module imports
  */
-var express = require('express');
-var http = require('http');
+import express from 'express';
 
 /**
  * Initialize App with globals
@@ -27,8 +26,7 @@ app.use((err, req, res, next) => {
 /**
  * Start HTTP Server
  */
-var server = http.Server(app);
 var port = process.env.SERVER_PORT || 3000;
-server.listen(port, () => {
+app.listen(port, () => {
     console.log("Server listening on port ", port);
 });
