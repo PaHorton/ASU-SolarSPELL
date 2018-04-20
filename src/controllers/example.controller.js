@@ -19,7 +19,7 @@ export default class {
      * Both of the below are valid.
      * One uses .then and .catch
      * The other uses await
-     * 
+     *
      * These are called PROMISES
      * It is the better way to do async stuff in javascript
      * Google them to learn more.

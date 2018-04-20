@@ -1,7 +1,7 @@
 // Import controllers here
-import ExampleController from './example.controller';
+import ContentController from './content.controller';
 
 // Add them to the export here
 export default {
-    ExampleController
+    ContentController
 };
