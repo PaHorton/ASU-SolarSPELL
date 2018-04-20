@@ -20,7 +20,8 @@
   "dependencies": {
     "esm": "^3.0.7",
     "express": "^4.16.3",
-    "mongoose": "^5.0.11"
+    "mongoose": "^5.0.11",
+    "urlencode": "^1.1.0"
   },
   "devDependencies": {
     "dotenv": "^5.0.1",

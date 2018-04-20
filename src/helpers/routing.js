@@ -4,7 +4,7 @@ export default ({
     app,
     datalayer
 }) => {
-    app.use('/example', new controllers.ExampleController({
+    app.use('/content', new controllers.ContentController({
         app,
         datalayer
     }).router);
