@@ -12,7 +12,7 @@ import path from 'path';
 var cors = require('cors')
 
 let app = express();
-app.use(cors())
+app.use(cors({origin: '*'}))
 /**
  * Instantiate Datalayer
  */
