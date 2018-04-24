@@ -16,6 +16,7 @@ export default class {
         router.get('/get_by_subject', (req, res, next) => this.getContentBySubjects(req, res, next));
         router.get('/get_file', (req, res, next) => this.getContentByID(req, res, next));
         router.get('/get_all', (req, res, next) => this.getAll(req, res, next));
+        router.get('/get_by_keyword', (req, res, next) => this.getContentByKeyword(req, res, next));
     }
 
     async getContentBySubjects(req, res, next) {
@@ -54,5 +55,29 @@ export default class {
 
     async getAll(req, res, next) {
         res.send(contentFile);
+    }
+
+    async getContentByKeyword(req, res, next) {
+        let keywordArray = req.query.Keyword;
+        if(!Array.isArray(keywordArray)) {
+            keywordArray = [keywordArray];
+        }
+        console.log(keywordArray)
+        const content = contentFile.filter((contentItem) => {
+            let match = true;
+            for (let keyword of keywordArray) {
+                keyword = urlEncode.decode(keyword);
+                if(!contentItem.Keywords) {
+                    match = false;
+                    break;
+                }
+                if (!contentItem.Keywords.includes(keyword)) {
+                    match = false;
+                    break;
+                }
+            }
+            return match;
+        })
+        res.send(content);
     }
 };

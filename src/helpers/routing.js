@@ -8,4 +8,8 @@ export default ({
         app,
         datalayer
     }).router);
+    app.use('/util', new controllers.UtilityController({
+        app,
+        datalayer
+    }).router);
 };
