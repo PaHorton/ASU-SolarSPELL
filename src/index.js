@@ -9,8 +9,10 @@ import path from 'path';
 /**
  * Initialize App with globals
  */
-let app = express();
+var cors = require('cors')
 
+let app = express();
+app.use(cors())
 /**
  * Instantiate Datalayer
  */
